@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import SearchBox from '../components/SearchBox';
 import './App.css';
+import ParticlesBg from 'particles-bg';
 
 function App() {
   const [numberFact, setNumberFact] = useState('');
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <div className='tc bg-gradient'>
+      <ParticlesBg type="cobweb" bg={true} />
       <h1 className='f1'>Number Facts</h1>
       <SearchBox onSearch={handleSearch} onRandom={handleRandom} />
       {loading ? (
