@@ -11,7 +11,7 @@ function App() {
   const fetchNumberFact = async (number) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://numbersapi.com/${number}/trivia`);
+      const response = await fetch(`http://localhost:3000/api/${number}`);
       const data = await response.text();
       setNumberFact(data);
       setLoading(false);
