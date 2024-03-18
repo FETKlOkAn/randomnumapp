@@ -1,5 +1,5 @@
 // App.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import SearchBox from '../components/SearchBox';
 import './App.css';
 
@@ -31,7 +31,7 @@ function App() {
   };
 
   return (
-    <div className='tc'>
+    <div className='tc bg-gradient'>
       <h1 className='f1'>Number Facts</h1>
       <SearchBox onSearch={handleSearch} onRandom={handleRandom} />
       {loading ? (

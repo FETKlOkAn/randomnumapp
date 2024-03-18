@@ -1,1 +1,3 @@
-
+.tc{
+    background-color: linear-gradient(to right, rgb(255, 0, 149), rgb(255, 200, 0)) !important;
+}
