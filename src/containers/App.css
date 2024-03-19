@@ -1,3 +1,34 @@
-.tc{
-    background-color: linear-gradient(to right, rgb(255, 0, 149), rgb(255, 200, 0)) !important;
-}
+/* Define animations */
+@keyframes emergeFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes typeEffect {
+    from {
+      width: 0;
+    }
+  }
+  
+  /* Apply animations to relevant elements */
+  .lucky-number-animation {
+    opacity: 0; /* Initially hide the lucky number */
+    animation: emergeFromTop 0.5s ease-out forwards;
+  }
+  
+  .number-animation {
+    opacity: 0;
+    animation: emergeFromTop 0.5s ease-out forwards 0.5s; /* Delay of 0.5s */
+  }
+  
+  .fact-typing-animation {
+    opacity: 0; /* Initially hide the fact */
+    animation: typeEffect 1s steps(40) forwards, emergeFromTop 0.5s ease-out forwards 1.5s; /* Typewriter effect starts after 1.5s delay */
+  }
+  
